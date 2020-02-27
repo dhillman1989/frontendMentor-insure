@@ -1,12 +1,13 @@
+
 :root {
     font-size: 16px;
 }
-
+       
 *{
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
+ }   
 
 body{
     font-size: 16px;
@@ -29,7 +30,7 @@ hr{
     width: 100px;
     border-top: 1px solid #fff;
     margin-bottom: 50px;
-}
+} 
 
 h1, h2, h3, h4, h5,h6{
     font-family: 'DM Serif Display', serif;
@@ -46,7 +47,6 @@ p{
     text-wrap: justify;
     line-height: 30px;
 }
-
 .topbar{
     display:flex;
     justify-content: space-between;
@@ -131,15 +131,26 @@ p{
 .different ul{
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .different ul li{
     padding-right: 40px;
     line-height: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 200px;
+    min-width: 200px;
+    max-width: 300px;
 }
 
 .different ul li:nth-of-type(3){
     padding-right: 0;
+}
+
+.different h1{
+    margin-bottom: 50px;
 }
 
 .different h2{
@@ -219,4 +230,132 @@ p{
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+
+   
+
+@media screen and (max-width: 375px){
+       
+   *{
+       margin:auto;
+       text-align: center;
+   } 
+
+    .topbar{
+        display:flex;
+        align-items:flex-start;
+        height: 50px;
+        text-align:left;
+        padding: 0 25px;
+    }
+
+    .topbar img{
+        margin-left: 0;
+    }
+
+    .topbar ul{
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .splash{
+        padding: 0px;
+        height: auto;
+    }
+
+    .splash h1{
+        font-size: 3.2rem
+    }
+
+    .splash .container{
+        padding: 0;
+        width: 100%;
+        margin:auto;
+        display:flex;
+        flex-direction: column-reverse;
+    }
+
+    .splash .container .splash-image{
+        width: 100%;
+    }
+
+    .splash hr{
+        display: none;
+    }
+
+    .splash .container .text{
+        width: 80%;
+        text-align:center;
+        align-self:center;
+        padding: 60px 0;
+    }
+
+
+    .different{
+        padding: 0px;
+        padding-top: 60px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .different ul{
+        flex-direction: column;
+        margin: 0;
+        padding; 0;
+    }
+
+    .different ul li{
+        max-width: 600px;
+        min-width: 300px;
+        padding-right: 0;
+        padding-left: 0;    
+    }
+
+    .how-we-work{
+        width: 90%;
+        margin: auto;
+        margin-top: 100px;
+        padding: 25px 0;
+        flex-direction: column;
+    }
+
+    .how-we-work h1{
+        font-size:2.5rem;
+        width: 80%;
+    }
+
+    .footer{
+        margin-top: 100px;
+        justify-content:center;
+    
+    }
+
+    .footer-social{
+        flex-direction: column;
+        justify-items: center;
+        align-items:center;
+    }
+
+    .footer-logo{
+        margin-bottom: 20px;
+     }
+
+     .footer-main{
+         flex-direction: column;
+         width: 100%;
+         margin: auto;
+     }
+
+     .footer-main ul li{
+         margin: 0;
+         padding: 0;
+         align-items: center;
+         100%;
+     }
+
+     .footer-main div{
+         margin-top: 50px;
+     }
 }
